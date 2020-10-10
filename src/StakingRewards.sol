@@ -38,10 +38,12 @@ contract StakingRewards is Ownable, ReentrancyGuard, StakingRewardsAcceleration 
 
     constructor(
         address _rewardsToken,
-        address _stakingToken
+        address _stakingToken,
+        uint256 _rewardsDuration
     ) public Ownable() {
         rewardsToken = IERC20(_rewardsToken);
         stakingToken = IERC20(_stakingToken);
+        rewardsDuration = _rewardsDuration;
     }
 
     /* ========== VIEWS ========== */
