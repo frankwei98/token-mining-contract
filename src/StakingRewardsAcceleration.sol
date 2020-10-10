@@ -2,7 +2,7 @@
 
 pragma solidity ^0.6;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 interface IStakingRewardsAcceleration {
     function accOf(address account) external view returns (uint16);

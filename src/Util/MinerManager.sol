@@ -2,22 +2,22 @@
 
 pragma solidity ^0.6.0;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MinerManager is Ownable {
     mapping (address => bool) public minters;
 
     constructor() internal Ownable() {}
 
-    function addMinter(address _minter) public onlyOwner {
+    function addMiner(address _minter) public onlyOwner {
         minters[_minter] = true;
     }
-    function removeMinter(address _minter) public onlyOwner {
+    function removeMiner(address _minter) public onlyOwner {
         minters[_minter] = false;
     }
 
     modifier onlyMiner() {
-        require(minters[msg.sender], "Error: only minter");
+        require(minters[msg.sender], "Error: only miner");
         _;
     }
 }

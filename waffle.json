@@ -1,0 +1,7 @@
+{
+    "compilerType": "solcjs",
+    "compilerVersion": "./node_modules/solc",
+    "sourceDirectory": "./src",
+    "outputDirectory": "./build",
+    "flattenOutputDirectory": "./flattened"
+}
